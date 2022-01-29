@@ -217,15 +217,15 @@ PHPBrew 提供默认的 Variant ，以及一些虚拟 Variants。
 举个例子，假设你使用默认 Variant，并且需要启用数据库支持（mysql，sqlite，postgresql）编译 PHP，只需执行：
 
 ```bash
-$ phpbrew install 5.4.5 +default+dbs
+$ phpbrew install 5.4.5 +default +dbs
 ```
 
 也可以：
 
 ```bash
-$ phpbrew install 5.3.10 +mysql+sqlite+cgi
+$ phpbrew install 5.3.10 +mysql +sqlite +cgi
 
-$ phpbrew install 5.3.10 +mysql+debug+pgsql +apxs2
+$ phpbrew install 5.3.10 +mysql +debug +pgsql +apxs2
 
 $ phpbrew install 5.3.10 +pdo +mysql +pgsql +apxs2=/usr/bin/apxs2
 ```
@@ -233,13 +233,13 @@ $ phpbrew install 5.3.10 +pdo +mysql +pgsql +apxs2=/usr/bin/apxs2
 将 pgsql (PostgreSQL) 扩展编译进 PHP：
 
 ```bash
-$ phpbrew install 5.4.1 +pgsql+pdo
+$ phpbrew install 5.4.1 +pgsql +pdo
 ```
 
 若你的 Mac 上已经安装 postgresql，也可以指定特定目录编译 pgsql 扩展：
 
 ```bash
-$ phpbrew install 5.4.1 +pdo+pgsql=/opt/local/lib/postgresql91/bin
+$ phpbrew install 5.4.1 +pdo +pgsql=/opt/local/lib/postgresql91/bin
 ```
 
 pgsql 的路径即为`pg_config`所在目录，你可以在`/opt/local/lib/postgresql91/bin`找到它。
